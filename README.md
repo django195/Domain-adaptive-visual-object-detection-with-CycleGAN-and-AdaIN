@@ -88,5 +88,6 @@ Here are some models that we have obtained after the finetuning phase on cyclega
 * [AdaIN model](https://drive.google.com/file/d/12WFUiVa61_DffoObRBjwozM5dpIieohf/view?usp=sharing)
 
 # Demo
-[Here](https://drive.google.com/drive/folders/1emEb4hBtmzKSZ6eftYSxqGWS0pc-Yv6c?usp=sharing) we can find a demo of how the detector work after the finetuning with Adain.\\
-[Here](https://drive.google.com/drive/folders/1iK3W9i4lIFHpuxDlo0BR1SXx-K8DsteW?usp=sharing) we can find a demo of how the detector work after the finetuning with CycleGAN.
+[Here](https://drive.google.com/drive/folders/1emEb4hBtmzKSZ6eftYSxqGWS0pc-Yv6c?usp=sharing) we can find a demo of how the detector works on clipart dataset after the finetuning with Adain.
+
+[Here](https://drive.google.com/drive/folders/1iK3W9i4lIFHpuxDlo0BR1SXx-K8DsteW?usp=sharing) we can find a demo of how the detector works on clipart dataset after the finetuning with CycleGAN.
