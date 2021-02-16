@@ -34,10 +34,11 @@ In order to add a new dataset it can be followed this [guide](./DEVELOP_GUIDE.md
 # Finetuning  
 
 ## Cyclegan
-The experiments on CycleGAN need a new dataset of images that are domain shifted. We have used this [code](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) , which is the official imlplementation of cyclegan, to train a new model on PascalVOC 2007 and 2012 on order to do a pixel level domain adaptation in Clipart1k domain.
+The experiments on CycleGAN need a new dataset of images that are domain shifted. We have used this [code](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) , which is the official implementation of cyclegan, to train a new model on PascalVOC 2007 and 2012 in order to do a pixel level domain adaptation in Clipart1k domain.
+
 The instruction to create this dataset are in the cycleGAN repository linked above.
 After the creation of this new dataset that contains source images (voc2007 and voc2012) shifted in clipart domain, we need to import the dataset as we have explained before. After that the fine-tuning phase on SSD can start.
- In oredr to perform the finetuning we can use:
+ In order to perform the finetuning we can use:
 ```bash
 python train.py --config-file A --finetuning B 
 ```
@@ -45,7 +46,7 @@ Where:
 * A is path of the specific config-file containing parameters of the finetuning
 * B is the path containing the weights of the model on which the finetuning should be applied
 
-In ./configs you will find the parameters that we used for the CycleGAN finetuning steps, they have the pattern "vgg_ssd300_voc2Clipart_FineTuning#.yaml" where # is relating to the specific experiment. They can be modified as you want.
+In /configs you will find the parameters that we used for the CycleGAN finetuning steps, they have the pattern "vgg_ssd300_voc2Clipart_FineTuning#.yaml" where # is relating to the specific experiment. They can be modified as you want.
 
 ## AdaIN
 Starting from [this](https://github.com/naoto0804/pytorch-AdaIN) AdaIN repository  
@@ -55,9 +56,13 @@ From that repository, we also used the pre-trained model for the style transfer.
 In /ssd/Adain you will find what we used for the AdaIN pixel level domain adaptation step.
 
 In the "configs" folder you will find the parameters that we used for the AdaIN finetuning steps, they have
-the pattern "vgg_ssd300_ADAIN_voc2Clipart_FineTuning#" where # is relating to the specific experiment.
+the pattern "vgg_ssd300_ADAIN_voc2Clipart_FineTuning#.yaml" where # is relating to the specific experiment.
 
-In SSD-master/
+In ssd/data/build.py we added the build function for the style images dataloader, 
+this is activated only when the adain flag is set to true.
+
+The online style transfer is applied in ssd/engine/trainer.py, if the adain flag is set to true,
+in the training steps the function translate_images is called such that the style transfer is applied
 
 To run the finetuning you should write in the console something like:
 ```bash
