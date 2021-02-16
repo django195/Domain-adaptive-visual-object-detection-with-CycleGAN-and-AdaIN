@@ -6,6 +6,7 @@ In this project we have used the code proposed [here](https://github.com/lufficc
 # Step-by-step Installation
 ```bash
 git clone https://github.com/gurciuoli95/Domain-adaptive-visual-object-detection-with-CycleGAN-and-AdaIN.git
+cd Domain-adaptive-visual-object-detection-with-CycleGAN-and-AdaIN-main
 pip install -r requirements.txt
 ```
 # Configuration
