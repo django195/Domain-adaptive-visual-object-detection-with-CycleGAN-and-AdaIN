@@ -81,3 +81,12 @@ A first evaluation is printed at the end of the finetuning phase or with th comm
 ```
 where:
 A is the path to the specific config-file containing parameters of the finetuning.
+
+# Models
+Here are some models that we have obtained after the finetuning phase on cyclegan and adain:
+* [CycleGAN model](https://drive.google.com/file/d/128MCrxKXRNz8pBmiUjv9V_bx8Zl8tGWe/view?usp=sharing)
+* [AdaIN model](https://drive.google.com/file/d/12WFUiVa61_DffoObRBjwozM5dpIieohf/view?usp=sharing)
+
+# Demo
+[Here](https://drive.google.com/drive/folders/1emEb4hBtmzKSZ6eftYSxqGWS0pc-Yv6c?usp=sharing) we can find a demo of how the detector work after the finetuning with Adain.
+[Here](https://drive.google.com/drive/folders/1iK3W9i4lIFHpuxDlo0BR1SXx-K8DsteW?usp=sharing) we can find a demo of how the detector work after the finetuning with CycleGAN.
