@@ -46,7 +46,7 @@ Where:
 
 In ./configs you will find the parameters that we used for the CycleGAN finetuning steps, they have the pattern "vgg_ssd300_voc2Clipart_FineTuning#.yaml" where # is relating to the specific experiment. They can be modified as you want.
 
-##AdaIN
+## AdaIN
 Starting from [this](https://github.com/naoto0804/pytorch-AdaIN) AdaIN repository  
 
 We have implemented AdaIN style transfer internally in SSD starting from the code provided [here](https://github.com/naoto0804/pytorch-AdaIN)
@@ -68,7 +68,7 @@ where:
 * C is a boolean, it should be setted as True.
 * D is an int, is the probability with which the style transfer will be applied to a content image of the source domain.
 
-#Evaluation
+# Evaluation
 A first evaluation is printed at the end of the finetuning phase or with th command:
 ```bash
 !python test.py --config-file A 
