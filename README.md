@@ -5,8 +5,7 @@ In this project we have used the code proposed [here](https://github.com/lufficc
 
 # Step-by-step Installation
 ```bash
-git clone 
-cd 
+git clone https://github.com/gurciuoli95/Domain-adaptive-visual-object-detection-with-CycleGAN-and-AdaIN.git
 pip install -r requirements.txt
 ```
 # Configuration
@@ -42,12 +41,12 @@ After the creation of this new dataset that contains source images (voc2007 and 
 python train.py --config-file A --finetuning B 
 ```
 Where:
-A is path of the specific config-file containing parameters of the finetuning
-B is the path containing the weights of the model on which the finetuning should be applied
+* A is path of the specific config-file containing parameters of the finetuning
+* B is the path containing the weights of the model on which the finetuning should be applied
 
 In ./configs you will find the parameters that we used for the CycleGAN finetuning steps, they have the pattern "vgg_ssd300_voc2Clipart_FineTuning#.yaml" where # is relating to the specific experiment. They can be modified as you want.
-##AdaIN
 
+##AdaIN
 Starting from [this](https://github.com/naoto0804/pytorch-AdaIN) AdaIN repository  
 
 We have implemented AdaIN style transfer internally in SSD starting from the code provided [here](https://github.com/naoto0804/pytorch-AdaIN)
@@ -64,10 +63,10 @@ To run the finetuning you should write in the console something like:
 !python train.py --config-file A --finetuning B --adain C --probability D
 ```
 where:
-A is the path to the specific config-file containing parameters of the finetuning.
-B is the path containing the weights of the model on which the finetuning should be applied.
-C is a boolean, it should be setted as True.
-D is an int, is the probability with which the style transfer will be applied to a content image of the source domain.
+* A is the path to the specific config-file containing parameters of the finetuning.
+* B is the path containing the weights of the model on which the finetuning should be applied.
+* C is a boolean, it should be setted as True.
+* D is an int, is the probability with which the style transfer will be applied to a content image of the source domain.
 
 #Evaluation
 A first evaluation is printed at the end of the finetuning phase or with th command:
