@@ -1,0 +1,15 @@
+MODEL:
+  NUM_CLASSES: 21
+INPUT:
+  IMAGE_SIZE: 300
+DATASETS:
+  TRAIN: ("voc2clipart_finetuning",)
+  TEST: ("clipart_test",)
+SOLVER:
+  MAX_ITER: 10000
+  LR_STEPS: [80000, 100000]
+  GAMMA: 0.1
+  BATCH_SIZE: 32
+  LR: 0.00001
+
+OUTPUT_DIR: '/content/drive/MyDrive/SSD-master/outputs/vgg_ssd300_voc2clip'
